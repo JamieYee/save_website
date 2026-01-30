@@ -1,0 +1,27 @@
+{
+  "name": "company-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "i18n.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/JamieYee/xjjnb.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://gitlab.com/JamieYee/xjjnb/issues"
+  },
+  "homepage": "https://gitlab.com/JamieYee/xjjnb#readme",
+  "dependencies": {
+    "@dicebear/collection": "^9.3.1",
+    "@dicebear/core": "^9.3.1",
+    "semver": "^7.7.3",
+    "wrangler": "^4.61.1"
+  }
+}
