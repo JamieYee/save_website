@@ -4,7 +4,7 @@
   "description": "",
   "main": "i18n.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo 'no build needed'"
   },
   "repository": {
     "type": "git",
