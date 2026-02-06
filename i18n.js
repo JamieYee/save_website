@@ -26,12 +26,12 @@ const translations = {
         // About Section
         about_title: "About Us",
         about_subtitle: "Xiongjiujiu - Professional Amazon Smartwatch Seller",
-        about_mission_title: "Our Mission",
-        about_mission_desc: "Provide high-quality, cost-effective smartwatches to global users, integrating technology into life and making health accessible.",
-        about_vision_title: "Our Vision",
-        about_vision_desc: "Become the most trusted smartwatch brand on Amazon, winning global user recognition with quality products and services.",
-        about_values_title: "Our Values",
-        about_values_desc: "Quality first, customer-centric, continuous innovation, and honest business practices.",
+        about_mission_title: "Company Vision",
+        about_mission_desc: "Steadfast for 37 years, enabling our colleagues to achieve both financial and spiritual freedom.",
+        about_vision_title: "Company Philosophy",
+        about_vision_desc: "Heart-based, continuously contributing to social development.",
+        about_values_title: "Core Values",
+        about_values_desc: "Equality, Trust, Unity, Collaboration, Innovation, Efficiency.",
 
         // Services Section (Product Features)
         services_title: "Product Features",
