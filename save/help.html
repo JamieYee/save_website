@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>飞飞记账 - 帮助文档</title>
+    <meta name="description" content="飞飞记账帮助文档，提供详细的使用指南和常见问题解答。" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/help.css" />
+    <link rel="icon" sizes="any" href="favicon.ico" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <!-- Marked.js for Markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/save.png" alt="Save App Logo" class="logo-icon" />
+                </a>
+            </div>
+            <a href="index.html" class="nav-link">返回首页</a>
+        </header>
+
+        <section class="help-container">
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="?doc=index.md" data-doc="index.md" class="doc-link menu-title">首页</a></li>
+                    <li><a href="?doc=backup.md" data-doc="backup.md" class="doc-link menu-title">数据备份</a>
+                    </li>
+
+                    <li>
+                        <div class="menu-title">自动记账 <img src="images/arrow_right.svg" class="arrow" alt="arrow"></div>
+                        <ul class="submenu">
+                            <li><a href="?doc=android-auto-accounting.md" data-doc="android-auto-accounting.md"
+                                    class="doc-link">Android 自动记账</a></li>
+                            <li><a href="?doc=ios-auto-accounting.md" data-doc="ios-auto-accounting.md"
+                                    class="doc-link">iOS 自动记账</a></li>
+                        </ul>
+                    </li>
+                    <!-- Add more categories here -->
+                </ul>
+            </aside>
+
+            <main class="content-area">
+                <div id="markdown-content" class="markdown-body">
+                    <p>请选择左侧菜单查看帮助文档。</p>
+                </div>
+            </main>
+        </section>
+
+        <footer>
+            <script>
+                document.write(
+                    `<span style="color: #000; font-size: 15px;">© ${new Date().getFullYear()} 飞飞记账. 保留所有权利。</span>`
+                );
+            </script>
+        </footer>
+    </div>
+    <script src="js/index_i18n.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contentDiv = document.getElementById('markdown-content');
+            const links = document.querySelectorAll('.doc-link');
+            const menuTitles = document.querySelectorAll('.menu-title');
+
+            // Function to load and render Markdown
+            async function loadDoc(filename) {
+                try {
+                    const response = await fetch(`docs/${filename}`);
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    const text = await response.text();
+                    contentDiv.innerHTML = marked.parse(text);
+                } catch (error) {
+                    contentDiv.innerHTML = `<p style="color: red;">Error loading document: ${error.message}</p>`;
+                }
+            }
+
+            // Toggle Submenu
+            menuTitles.forEach(title => {
+                title.addEventListener('click', () => {
+                    const submenu = title.nextElementSibling;
+                    const arrow = title.querySelector('.arrow');
+
+                    if (submenu) {
+                        submenu.classList.toggle('open');
+                        if (submenu.classList.contains('open')) {
+                            if (arrow) arrow.style.transform = 'rotate(90deg)';
+                        } else {
+                            if (arrow) arrow.style.transform = 'rotate(0deg)';
+                        }
+                    }
+                });
+            });
+
+            // Handle Navigation
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const filename = link.getAttribute('data-doc');
+
+                    // Update URL
+                    const url = new URL(window.location);
+                    url.searchParams.set('doc', filename);
+                    window.history.pushState({}, '', url);
+
+                    // Update UI
+                    updateActiveLink(filename);
+                    loadDoc(filename);
+                });
+            });
+
+            function updateActiveLink(filename) {
+                links.forEach(l => l.classList.remove('active'));
+                const activeLink = document.querySelector(`.doc-link[data-doc="${filename}"]`);
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                    // Ensure parent menu is open
+                    const parentSubmenu = activeLink.closest('.submenu');
+                    if (parentSubmenu) {
+                        parentSubmenu.classList.add('open');
+                        const title = parentSubmenu.previousElementSibling;
+                        if (title) {
+                            const arrow = title.querySelector('.arrow');
+                            if (arrow) arrow.style.transform = 'rotate(90deg)';
+                        }
+                    }
+                }
+            }
+
+            // Initial Load based on URL
+            const params = new URLSearchParams(window.location.search);
+            const docParam = params.get('doc');
+
+            if (docParam) {
+                updateActiveLink(docParam);
+                loadDoc(docParam);
+            } else {
+                // Default to index.md
+                updateActiveLink('index.md');
+                loadDoc('index.md');
+            }
+
+            // Handle Browser Back/Forward
+            window.addEventListener('popstate', () => {
+                const params = new URLSearchParams(window.location.search);
+                const doc = params.get('doc');
+                if (doc) {
+                    updateActiveLink(doc);
+                    loadDoc(doc);
+                } else {
+                    updateActiveLink('index.md');
+                    loadDoc('index.md');
+                    links.forEach(l => l.classList.remove('active'));
+                    // Close all submenus if back to root? Maybe not necessary.
+                    menuTitles.forEach(title => {
+                        const submenu = title.nextElementSibling;
+                        const arrow = title.querySelector('.arrow');
+                        if (submenu) {
+                            submenu.classList.remove('open');
+                            if (arrow) arrow.style.transform = 'rotate(0deg)';
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

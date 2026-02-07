@@ -3,7 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 18px; /* 增加字体大小 */
+    font-size: 18px;
+    /* 增加字体大小 */
 }
 
 body {
@@ -33,7 +34,8 @@ header {
 .logo-icon {
     width: 40px;
     height: 40px;
-    /* background-color: #000; */ /* 移除背景色 */
+    /* background-color: #000; */
+    /* 移除背景色 */
     border-radius: 8px;
     position: relative;
     overflow: hidden;
@@ -45,13 +47,17 @@ header {
     color: #666;
     text-decoration: none;
     font-size: 14px;
-    margin-left: 15px; /* 添加左边距 */
-    border: none; /* 移除边框 */
+    margin-left: 15px;
+    /* 添加左边距 */
+    border: none;
+    /* 移除边框 */
 }
 
 .nav-link:hover {
-    color: #000; /* 鼠标悬停时变为黑色 */
-    text-decoration: underline; /* 鼠标悬停时添加下划线 */
+    color: #000;
+    /* 鼠标悬停时变为黑色 */
+    text-decoration: underline;
+    /* 鼠标悬停时添加下划线 */
 }
 
 .hero {
@@ -78,16 +84,20 @@ header {
 .hero-image img {
     max-width: 100%;
     height: auto;
-    transition: transform 0.3s ease, opacity 1s ease; /* 添加过渡效果 */
-    opacity: 0; /* 初始状态透明 */
+    transition: transform 0.3s ease, opacity 1s ease;
+    /* 添加过渡效果 */
+    opacity: 0;
+    /* 初始状态透明 */
 }
 
 .hero-image img:hover {
-    transform: scale(1.1); /* 鼠标悬停时放大图片 */
+    transform: scale(1.1);
+    /* 鼠标悬停时放大图片 */
 }
 
 .hero-image img.fade-in {
-    opacity: 1; /* 淡入效果 */
+    opacity: 1;
+    /* 淡入效果 */
 }
 
 .hero-text {
@@ -134,11 +144,11 @@ footer {
     .hero-content {
         max-width: 800px;
     }
-    
+
     .app-title {
         font-size: 40px;
     }
-    
+
     .app-description {
         font-size: 16px;
     }
@@ -148,199 +158,258 @@ footer {
     .hero-content {
         flex-direction: column;
         text-align: center;
-        height: calc(100vh - 150px); /* 设置高度为视口高度减去 header 的高度 */
-        justify-content: flex-start; /* 垂直顶部对齐 */
-        overflow: hidden; /* 防止溢出 */
+        height: calc(100vh - 150px);
+        /* 设置高度为视口高度减去 header 的高度 */
+        justify-content: flex-start;
+        /* 垂直顶部对齐 */
+        overflow: hidden;
+        /* 防止溢出 */
     }
-    
+
     .hero-text {
         padding-left: 0;
         padding-top: 20px;
-        order: 2; /* 将文字内容放在图片下面 */
-        margin-bottom: 0; /* 移除多余的 margin */
-        height: auto; /* 高度根据内容自适应 */
+        order: 2;
+        /* 将文字内容放在图片下面 */
+        margin-bottom: 0;
+        /* 移除多余的 margin */
+        height: auto;
+        /* 高度根据内容自适应 */
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* 垂直顶部对齐 */
+        justify-content: flex-start;
+        /* 垂直顶部对齐 */
     }
-    
+
     .app-title {
         font-size: 36px;
-        margin-bottom: 10px; /* 调整 margin */
+        margin-bottom: 10px;
+        /* 调整 margin */
     }
-    
+
     .app-description {
-        margin-bottom: 20px; /* 调整 margin */
+        margin-bottom: 20px;
+        /* 调整 margin */
     }
-    
+
     .download-buttons {
         justify-content: center;
-        margin-bottom: 0; /* 移除多余的 margin */
+        margin-bottom: 0;
+        /* 移除多余的 margin */
     }
 
     .hero-image {
-        order: 1; /* 将图片放在文字内容上面 */
-        width: 50vw; /* 设置宽度为视口宽度的三分之一 */
-        height: auto; /* 高度自动调整 */
-        margin: 0px; /* 添加 margin-top 50px */
+        order: 1;
+        /* 将图片放在文字内容上面 */
+        width: 50vw;
+        /* 设置宽度为视口宽度的三分之一 */
+        height: auto;
+        /* 高度自动调整 */
+        margin: 0px;
+        /* 添加 margin-top 50px */
         display: flex;
         align-items: center;
-        justify-content: center; 
+        justify-content: center;
     }
 
     .hero-image img {
-        width: 100%; /* 图片宽度占满容器 */
-        height: auto; /* 高度自动调整 */
+        width: 100%;
+        /* 图片宽度占满容器 */
+        height: auto;
+        /* 高度自动调整 */
     }
 }
 
 @media (max-width: 640px) {
     .hero {
         padding: 10px 0;
-        height: calc(100vh - 150px); /* 设置高度为视口高度减去 header 的高度 */
-        overflow: hidden; /* 防止溢出 */
+        height: calc(100vh - 150px);
+        /* 设置高度为视口高度减去 header 的高度 */
+        overflow: hidden;
+        /* 防止溢出 */
     }
-    
+
     .app-title {
         font-size: 24px;
-        margin-bottom: 10px; /* 调整 margin */
+        margin-bottom: 10px;
+        /* 调整 margin */
     }
-    
+
     .app-description {
         font-size: 12px;
-        margin-bottom: 20px; /* 调整 margin */
+        margin-bottom: 20px;
+        /* 调整 margin */
     }
-    
+
     .download-buttons {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 0; /* 移除多余的 margin */
+        margin-bottom: 0;
+        /* 移除多余的 margin */
     }
-    
+
     .download-button img {
         height: 32px;
     }
 
     .hero-text {
-        order: 2; /* 将文字内容放在图片下面 */
-        margin-bottom: 0; /* 移除多余的 margin */
-        height: auto; /* 高度根据内容自适应 */
+        order: 2;
+        /* 将文字内容放在图片下面 */
+        margin-bottom: 0;
+        /* 移除多余的 margin */
+        height: auto;
+        /* 高度根据内容自适应 */
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* 垂直顶部对齐 */
+        justify-content: flex-start;
+        /* 垂直顶部对齐 */
     }
 
     .hero-image {
-        order: 1; /* 将图片放在文字内容上面 */
-        width: 50vw; /* 设置宽度为视口宽度的三分之一 */
-        height: auto; /* 高度自动调整 */
+        order: 1;
+        /* 将图片放在文字内容上面 */
+        width: 50vw;
+        /* 设置宽度为视口宽度的三分之一 */
+        height: auto;
+        /* 高度自动调整 */
         display: flex;
         align-items: center;
     }
 
     .hero-image img {
-        width: 100%; /* 图片宽度占满容器 */
-        height: auto; /* 高度自动调整 */
+        width: 100%;
+        /* 图片宽度占满容器 */
+        height: auto;
+        /* 高度自动调整 */
     }
 }
 
 @media (max-width: 480px) {
     .hero {
         padding: 0px;
-        height: calc(100vh - 200px); /* 设置高度为视口高度减去 header 的高度 */
-        overflow: hidden; /* 防止溢出 */
+        height: calc(100vh - 200px);
+        /* 设置高度为视口高度减去 header 的高度 */
+        overflow: hidden;
+        /* 防止溢出 */
     }
-    
+
     .app-title {
         font-size: 28px;
-        margin-bottom: 10px; /* 调整 margin */
+        margin-bottom: 10px;
+        /* 调整 margin */
     }
-    
+
     .app-description {
         font-size: 14px;
-        margin-bottom: 20px; /* 调整 margin */
+        margin-bottom: 20px;
+        /* 调整 margin */
     }
-    
+
     .download-buttons {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 0; /* 移除多余的 margin */
+        margin-bottom: 0;
+        /* 移除多余的 margin */
     }
-    
+
     .download-button img {
         height: 36px;
     }
 
     .hero-text {
-        order: 2; /* 将文字内容放在图片下面 */
-        margin-bottom: 0; /* 移除多余的 margin */
-        height: auto; /* 高度根据内容自适应 */
+        order: 2;
+        /* 将文字内容放在图片下面 */
+        margin-bottom: 0;
+        /* 移除多余的 margin */
+        height: auto;
+        /* 高度根据内容自适应 */
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* 垂直顶部对齐 */
+        justify-content: flex-start;
+        /* 垂直顶部对齐 */
     }
 
     .hero-image {
-        order: 1; /* 将图片放在文字内容上面 */
-        width: 30vw; /* 设置宽度为视口宽度的50% */
+        order: 1;
+        /* 将图片放在文字内容上面 */
+        width: 30vw;
+        /* 设置宽度为视口宽度的50% */
         margin: 0;
         display: flex;
-        justify-content: center; /* 水平居中 */
+        justify-content: center;
+        /* 水平居中 */
     }
 
     .hero-image img {
-        width: 100%; /* 图片宽度占满容器 */
-        height: auto; /* 高度自动调整 */
+        width: 100%;
+        /* 图片宽度占满容器 */
+        height: auto;
+        /* 高度自动调整 */
     }
 }
 
 @media (max-width: 360px) {
     .hero {
         padding: 5px 0;
-        height: calc(100vh - 200px); /* 设置高度为视口高度减去 header 的高度 */
-        overflow: hidden; /* 防止溢出 */
+        height: calc(100vh - 200px);
+        /* 设置高度为视口高度减去 header 的高度 */
+        overflow: hidden;
+        /* 防止溢出 */
     }
-    
+
     .app-title {
         font-size: 20px;
-        margin-bottom: 10px; /* 调整 margin */
+        margin-bottom: 10px;
+        /* 调整 margin */
     }
-    
+
     .app-description {
         font-size: 10px;
-        margin-bottom: 20px; /* 调整 margin */
+        margin-bottom: 20px;
+        /* 调整 margin */
     }
-    
+
     .download-buttons {
         flex-direction: column;
         align-items: center;
-        margin-bottom: 0; /* 移除多余的 margin */
+        margin-bottom: 0;
+        /* 移除多余的 margin */
     }
-    
+
     .download-button img {
         height: 28px;
     }
 
     .hero-text {
-        order: 2; /* 将文字内容放在图片下面 */
-        margin-bottom: 0; /* 移除多余的 margin */
-        height: auto; /* 高度根据内容自适应 */
+        order: 2;
+        /* 将文字内容放在图片下面 */
+        margin-bottom: 0;
+        /* 移除多余的 margin */
+        height: auto;
+        /* 高度根据内容自适应 */
         display: flex;
         flex-direction: column;
-        justify-content: flex-start; /* 垂直顶部对齐 */
+        justify-content: flex-start;
+        /* 垂直顶部对齐 */
     }
 
     .hero-image {
-        order: 1; /* 将图片放在文字内容上面 */
-        width: 40vw; /* 设置宽度为视口宽度的50% */
-        height: auto; /* 高度自动调整 */
-        margin: 0px; /* 添加 margin-top 50px */
+        order: 1;
+        /* 将图片放在文字内容上面 */
+        width: 40vw;
+        /* 设置宽度为视口宽度的50% */
+        height: auto;
+        /* 高度自动调整 */
+        margin: 0px;
+        /* 添加 margin-top 50px */
         display: flex;
         align-items: center;
     }
 
     .hero-image img {
-        width: 100%; /* 图片宽度占满容器 */
-        height: auto; /* 高度自动调整 */
+        width: 100%;
+        /* 图片宽度占满容器 */
+        height: auto;
+        /* 高度自动调整 */
     }
 }
