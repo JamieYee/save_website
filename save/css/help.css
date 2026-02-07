@@ -168,7 +168,7 @@
     .help-container {
         flex-direction: column;
         min-height: auto;
-        padding-bottom: 100px;
+        padding-bottom: 40px;
     }
 
     .sidebar {
@@ -180,6 +180,6 @@
     }
 
     .content-area {
-        padding-bottom: 100px;
+        padding-bottom: 40px;
     }
 }
