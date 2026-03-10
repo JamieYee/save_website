@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="页面未找到 - 熊啾啾">
+    <link rel="icon" sizes="any" href="/favicon.png" />
+
+    <title data-lang-key="page_not_found_title">404 - 页面未找到</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/index.css">
+    <style>
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .error-code {
+            font-size: 8rem;
+            font-weight: 800;
+            color: var(--primary-color, #0F6CF8);
+            margin: 0;
+            line-height: 1;
+        }
+
+        .error-message {
+            font-size: 2rem;
+            font-weight: 600;
+            margin: 1rem 0;
+            color: var(--text-color, #1F2937);
+        }
+
+        .error-description {
+            font-size: 1.125rem;
+            color: var(--text-light, #6B7280);
+            max-width: 500px;
+            margin-bottom: 2rem;
+        }
+
+        .home-button {
+            display: inline-block;
+            background-color: var(--primary-color, #0F6CF8);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .home-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(15, 108, 248, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo" data-lang-key="logo_link">🐻 熊啾啾</a>
+        </div>
+    </nav>
+
+    <!-- Error Section -->
+    <main class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-message" data-lang-key="404_message">页面未找到</h2>
+        <p class="error-description" data-lang-key="404_description">
+            抱歉，您访问的页面不存在或已被移除。</p>
+        <a href="/" class="home-button" data-lang-key="404_button">返回首页</a>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-bottom">
+                <p class="copyright" data-lang-key="footer_copyright">&copy; 2026 深圳市熊啾啾科技有限公司. 保留所有权利。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
