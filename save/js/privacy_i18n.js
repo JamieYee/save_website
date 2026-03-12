@@ -14,7 +14,7 @@
             <h1>飞飞记账 Privacy Policy</h1>
             <div class="policy-date">
               <p><strong>Effective Date:</strong> July 01, 2025</p>
-              <p><strong>Update Date:</strong> July 15, 2025</p>
+              <p><strong>Update Date:</strong> March 12, 2025</p>
             </div>
             <p>
               This is an expense tracking App. All functions are designed to achieve professional bookkeeping and help users optimize their personal financial situation.
@@ -26,9 +26,10 @@
             <p>1. How we collect and use your personal information</p>
             <p>2. How we store and protect your personal information</p>
             <p>3. How we share, transfer, and publicly disclose your personal information</p>
-            <p>4. Notes on Android Desktop Widgets</p>
-            <p>5. Privacy Policy Update Instructions</p>
-            <p>6. Company Information and Contact Details</p>
+            <p>4. Notes on Smart Accounting</p>
+            <p>5. Notes on Android Desktop Widgets</p>
+            <p>6. Privacy Policy Update Instructions</p>
+            <p>7. Company Information and Contact Details</p>
 
             <h2>1. How we collect and use your personal information</h2>
             <p>
@@ -52,7 +53,19 @@
               We may share your personal information externally in accordance with laws and regulations or mandatory requirements of government authorities.
             </p>
 
-            <h2>4. Notes on Android Desktop Widgets</h2>
+            <h2>4. Notes on Smart Accounting</h2>
+            <p>
+              After configuring a Large Language Model (LLM), the "Smart Accounting" feature offers the following two modes:
+            </p>
+            <ol>
+              <li><strong>Chat-based Accounting:</strong> By sending text messages through the chat interface, the app will call your configured LLM API, sending the text to the LLM for semantic analysis, and returning it as structured bill data.</li>
+              <li><strong>Screenshot-based Accounting (AI Assistant):</strong> When you enable "Photo Reading Permissions" and "Notification Permissions" and turn on the "AI Assistant" feature, the app will listen for your screenshot actions in the background. When you take a screenshot, the app first performs local OCR (Optical Character Recognition) on the image to extract text, and then sends it to the LLM for analysis to return structured bill data. Throughout the process, corresponding progress prompts will be provided in the notification bar.</li>
+            </ol>
+            <p>
+              Your chat data and screenshot contents will only be processed within the necessary scope of using the Smart Accounting feature, and only sent to the LLM service you personally configured. We will not use such information for other commercial purposes or share it with any third parties.
+            </p>
+
+            <h2>5. Notes on Android Desktop Widgets</h2>
             <p>
               This app supports Android desktop widgets to improve your convenience and operation efficiency.
             </p>
@@ -62,12 +75,12 @@
               <li>Widgets only read and display local data and do not involve any third-party communication.</li>
             </ol>
 
-            <h2>5. Privacy Policy Update Instructions</h2>
+            <h2>6. Privacy Policy Update Instructions</h2>
             <p>
               We may modify and update this privacy policy from time to time. We will publish updates in the 飞飞记账 app in the form of notifications and announcements. You can visit the 飞飞记账 app to query the latest version of the privacy policy.
             </p>
 
-            <h2>6. Company Information and Contact Details</h2>
+            <h2>7. Company Information and Contact Details</h2>
             <p>
               Our main operating company is Shenzhen Xiongjiujiu Technology Co., Ltd.
               Contact email: 898763215@qq.com.
