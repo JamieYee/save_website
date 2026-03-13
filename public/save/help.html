@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>飞飞记账 - 帮助文档</title>
     <meta name="description" content="飞飞记账帮助文档，提供详细的使用指南和常见问题解答。" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/help.css" />
-    <link rel="icon" sizes="any" href="favicon.ico" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/save/css/styles.css" />
+    <link rel="stylesheet" href="/save/css/help.css" />
+    <link rel="icon" sizes="any" href="/save/favicon.ico" />
+    <link rel="shortcut icon" href="/save/favicon.ico" type="image/x-icon" />
     <!-- Marked.js for Markdown rendering -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
@@ -19,7 +19,7 @@
         <header>
             <div class="logo">
                 <a href="index.html">
-                    <img src="images/save.png" alt="Save App Logo" class="logo-icon" />
+                    <img src="/save/images/save.png" alt="Save App Logo" class="logo-icon" />
                 </a>
             </div>
             <a href="index.html" class="nav-link">返回首页</a>
@@ -33,7 +33,7 @@
                     </li>
 
                     <li>
-                        <div class="menu-title">自动记账 <img src="images/arrow_right.svg" class="arrow" alt="arrow"></div>
+                        <div class="menu-title">自动记账 <img src="/save/images/arrow_right.svg" class="arrow" alt="arrow"></div>
                         <ul class="submenu">
                             <li><a href="?doc=auto-android.md" data-doc="auto-android.md" class="doc-link">Android
                                     自动记账</a></li>
@@ -60,7 +60,7 @@
             </script>
         </footer>
     </div>
-    <script src="js/index_i18n.js"></script>
+    <script src="/save/js/index_i18n.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const contentDiv = document.getElementById('markdown-content');
@@ -70,7 +70,7 @@
             // Function to load and render Markdown
             async function loadDoc(filename) {
                 try {
-                    const response = await fetch(`docs/${filename}`);
+                    const response = await fetch(`/save/docs/${filename}`);
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }

@@ -1,28 +1,27 @@
 {
-  "name": "company-website",
+  "name": "save_website",
   "version": "1.0.0",
   "description": "",
-  "main": "i18n.js",
+  "main": "index.js",
   "scripts": {
-    "build": "echo 'no build needed'"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/JamieYee/xjjnb.git"
+    "url": "git+https://github.com/JamieYee/save_website.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
-    "url": "https://gitlab.com/JamieYee/xjjnb/issues"
+    "url": "https://github.com/JamieYee/save_website/issues"
   },
-  "homepage": "https://gitlab.com/JamieYee/xjjnb#readme",
+  "homepage": "https://github.com/JamieYee/save_website#readme",
   "dependencies": {
-    "@dicebear/collection": "^9.3.1",
-    "@dicebear/core": "^9.3.1",
-    "@resvg/resvg-wasm": "^2.6.2",
+    "@dicebear/collection": "^9.2.4",
+    "@dicebear/core": "^9.2.4",
     "semver": "^7.7.3",
-    "wrangler": "^4.61.1"
+    "sharp": "^0.34.5"
   }
 }
