@@ -1,2 +1,2 @@
 // api/_config.js
-export const LATEST_VERSION = "1.0.7";
+export const LATEST_VERSION = "1.1.0";
