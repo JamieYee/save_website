@@ -43,12 +43,16 @@
             <ol>
               <li><strong>Data we do not process:</strong> This app does not collect IMEI, IMSI, device MAC address, SUPI, SUCI, contacts, call logs, calendar, SMS, or your local phone number.</li>
               <li><strong>Images / audio / video:</strong> Processed only when you actively choose an image and share it to "FeiFei Accounting" via system sharing. We run OCR locally first, then send recognized text (and content you explicitly choose to upload) to your self-configured LLM service. Scope is limited to what you actively share.</li>
-              <li><strong>Installed app list clarification:</strong> We do not request installed-app-list permission. When you trigger actions such as sharing, sending email, or opening a web link, Android may query apps that can handle that action. This is only for feature routing and compatibility checks, and is not used for profiling, advertising, or third-party sharing.</li>
+              <li><strong>Installed app list clarification:</strong> We do not proactively collect your full installed-app list. When you trigger actions such as sharing, sending email, or opening a web link, Android may temporarily query apps that can handle that action. This is only for feature routing and compatibility checks, and is not used for profiling, advertising, or third-party sharing.</li>
               <li><strong>Data minimization:</strong> We process personal information only within the minimum scope required for each feature. Refusing a non-essential permission affects only that feature and does not affect core bookkeeping functions.</li>
             </ol>
             <h3>1.2 Consent and Trigger Timing</h3>
             <p>
               Before processing personal information, we provide notice of the purpose, method, and scope through privacy pop-ups, permission prompts, or page disclosures, and process only after your consent is obtained. For non-essential data, you may revoke permission at any time in your system settings.
+            </p>
+            <h3>1.3 [Reading Installed Apps] Clarification</h3>
+            <p>
+              To support features such as sharing, sending email, and opening web links, Android may query which apps can handle a specific action (for example, apps that respond to a given intent) when you actively trigger that action. Purpose: feature routing and compatibility checks. Method: temporary on-device system query. Scope: only app response information related to the current action, not your full installed-app list. We do not use this information for profiling, personalized recommendation, or targeted marketing, and we do not share it with third parties.
             </p>
 
             <h2>2. How we store and protect your personal information</h2>
