@@ -139,6 +139,33 @@ footer {
     font-size: 12px;
 }
 
+.footer-text {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+    color: #5f6368;
+    font-size: 15px;
+}
+
+.footer-copyright,
+.footer-contact,
+.footer-contact-label,
+.footer-contact-link {
+    color: inherit;
+    font-size: inherit;
+}
+
+.footer-contact-link {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.footer-contact-link:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
 /* 响应式设计 */
 @media (max-width: 1024px) {
     .hero-content {
