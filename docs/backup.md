@@ -21,7 +21,7 @@ WebDAV (Web Distributed Authoring and Versioning) 是一种基于 HTTP 的协议
 5.  找到“第三方应用管理”，点击“添加应用”。
 6.  生成一个该应用专用的密码。
 
-    <img src="images/backup/tutorial1.jpeg" alt="WebDAV配置教程" style="width: 100%; max-width: 800px; margin: 10px 0;">
+    <img src="./assets/backup/tutorial1.jpeg" alt="坚果云 WebDAV 配置页面">
 
 > [!TIP]
 > **服务器地址**：`https://dav.jianguoyun.com/dav/您的文件夹名称`
@@ -37,7 +37,7 @@ WebDAV (Web Distributed Authoring and Versioning) 是一种基于 HTTP 的协议
 3.  进入“备份与恢复”。
 4.  选择“配置远程备份服务”。
 
-    <img src="images/backup/tutorial2.jpeg" alt="WebDAV配置教程" style="height: 100%; max-height: 300px; margin: 10px 0;">
+    <img src="./assets/backup/tutorial2.jpeg" alt="飞飞记账远程备份配置页面">
 
 ### 第三步：验证备份
 

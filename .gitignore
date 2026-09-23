@@ -3,6 +3,7 @@
 
 # Dependencies
 node_modules/
-.wrangler/
+docs/.vitepress/cache/
+public/help/
 .vercel
 .env*.local

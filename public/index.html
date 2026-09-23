@@ -2,224 +2,78 @@
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="熊啾啾 - 您的智能穿戴设备专家">
-    <meta name="keywords" content="智能手表,亚马逊智能手表,智能穿戴设备,运动手表,健康监测手表,外贸电商">
-
-    <link rel="canonical" href="https://www.xjjnb.com/" />
-
-    <title data-lang-key="page_title">熊啾啾</title>
-
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="熊啾啾" />
-    <meta property="og:title" content="熊啾啾 - 智能穿戴设备" />
-    <meta property="og:description" content="专注智能手表、运动健康监测手表的研发与销售。" />
-    <meta property="og:url" content="https://www.xjjnb.com/" />
-    <meta property="og:image" content="https://www.xjjnb.com/favicon.png" />
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>飞飞记账 - 简洁高效的个人记账 App</title>
+    <meta name="description" content="飞飞记账是一款简洁高效的个人记账应用，支持快速记账、分类统计、资产管理，帮助你轻松掌控每一笔收支。" />
+    <meta name="keywords" content="飞飞记账, 记账App, 个人记账, 手机记账, 收支管理, 财务管理, 账单统计, 理财工具" />
+    <meta name="robots" content="index, follow" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="icon" sizes="any" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "熊啾啾",
-      "alternateName": ["XJJNB", "熊啾啾官网"],
-      "url": "https://www.xjjnb.com/"
-    }
-    </script>
-
-    <link rel="icon" sizes="any" href="favicon.png" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <link rel="stylesheet" href="index.css">
+        {
+            "@context": "https://schema.org",
+            "@type": "MobileApplication",
+            "name": "飞飞记账",
+            "description": "一款简洁高效的个人记账应用，支持快速记账、分类统计和资产管理。",
+            "applicationCategory": "FinanceApplication",
+            "operatingSystem": "iOS, Android",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "CNY"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "飞飞记账"
+            }
+  }
+  </script>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo" data-lang-key="logo">🐻 熊啾啾</a>
-            <div class="nav-right">
-                <ul class="nav-links" id="navLinks">
-                    <li><a href="#home" data-lang-key="nav_home">首页</a></li>
-                    <li><a href="#about" data-lang-key="nav_about">关于我们</a></li>
-                    <li><a href="#services" data-lang-key="nav_services">产品特色</a></li>
-                    <li><a href="#advantages" data-lang-key="nav_advantages">为什么选择我们</a></li>
-                </ul>
-                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-                    ☰
-                </button>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="/images/save.png" alt="Save App Logo" class="logo-icon" />
             </div>
-        </div>
-    </nav>
+            <a href="/help/" class="nav-link">帮助文档</a>
+        </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <h1 data-lang-key="hero_title">智能科技 腕间之选</h1>
-            <p data-lang-key="hero_subtitle">熊啾啾 - 专注亚马逊智能手表销售，为全球用户提供高品质智能穿戴设备</p>
-            <div class="cta-buttons">
-                <a href="#services" class="btn btn-primary" data-lang-key="hero_cta1">浏览产品</a>
-                <a href="#about" class="btn btn-secondary" data-lang-key="hero_cta2">了解更多</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2 data-lang-key="about_title">关于我们</h2>
-                <p data-lang-key="about_subtitle">熊啾啾 - 亚马逊智能手表专业卖家</p>
-            </div>
-            <div class="cards-grid">
-                <div class="card fade-in">
-                    <div class="card-icon">🎯</div>
-                    <h3 data-lang-key="about_mission_title">公司愿景</h3>
-                    <p data-lang-key="about_mission_desc">坚守37年，让我们的同仁实现财务和精神双重自由。</p>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-image">
+                    <img src="/images/screenshot.webp" alt="App Screenshot" class="fade-in"
+                        style="max-width: 250px" />
                 </div>
-                <div class="card fade-in">
-                    <div class="card-icon">💡</div>
-                    <h3 data-lang-key="about_vision_title">公司理念</h3>
-                    <p data-lang-key="about_vision_desc">以心为本，持续为推动社会发展奉献力量。</p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon">⚡</div>
-                    <h3 data-lang-key="about_values_title">核心价值观</h3>
-                    <p data-lang-key="about_values_desc">平等，信任，团结，协同，创新，高效。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2 data-lang-key="services_title">产品特色</h2>
-                <p data-lang-key="services_subtitle">专业智能手表 功能全面覆盖</p>
-            </div>
-            <div class="cards-grid">
-                <div class="card fade-in">
-                    <div class="card-icon">🛒</div>
-                    <h3 data-lang-key="service_platform_title">健康监测</h3>
-                    <p data-lang-key="service_platform_desc">24小时心率监测、血氧检测、睡眠追踪、压力监测，全方位守护您的健康。</p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon">🌐</div>
-                    <h3 data-lang-key="service_website_title">运动模式</h3>
-                    <p data-lang-key="service_website_desc">支持100+种运动模式，精准记录运动数据，科学指导您的健身计划。</p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon">📦</div>
-                    <h3 data-lang-key="service_logistics_title">智能提醒</h3>
-                    <p data-lang-key="service_logistics_desc">来电提醒、消息通知、久坐提醒、喝水提醒，让您不错过任何重要信息。</p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon">🔋</div>
-                    <h3 data-lang-key="service_marketing_title">超长续航</h3>
-                    <p data-lang-key="service_marketing_desc">大容量电池设计，正常使用可续航7-15天，告别频繁充电烦恼。</p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon">🔍</div>
-                    <h3 data-lang-key="service_sourcing_title">精美外观</h3>
-                    <p data-lang-key="service_sourcing_desc">时尚设计、多款表盘、可更换表带，适配各种场合和个人风格。</p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon">💬</div>
-                    <h3 data-lang-key="service_support_title">防水防尘</h3>
-                    <p data-lang-key="service_support_desc">IP68防水等级，游泳、洗手、雨天都能放心佩戴，经久耐用。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Advantages Section -->
-    <section id="advantages">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2 data-lang-key="advantages_title">为什么选择我们</h2>
-                <p data-lang-key="advantages_subtitle">品质保证 服务专业</p>
-            </div>
-            <div class="cards-grid">
-                <div class="card fade-in">
-                    <div class="card-icon">🏆</div>
-                    <h3 data-lang-key="advantage1_title">产品质量</h3>
-                    <p data-lang-key="advantage1_desc">严格质检流程，每一款手表出厂前都经过多重测试，确保品质可靠。</p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon">🛍️</div>
-                    <h3 data-lang-key="advantage2_title">亚马逊认证</h3>
-                    <p data-lang-key="advantage2_desc">亚马逊官方认证卖家，海量好评，星级评分优秀，值得信赖。</p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon">💼</div>
-                    <h3 data-lang-key="advantage3_title">快速配送</h3>
-                    <p data-lang-key="advantage3_desc">亚马逊FBA仓储配送，Prime会员可享次日达，购物体验更便捷。</p>
-                </div>
-                <div class="card fade-in">
-                    <div class="card-icon">👩‍🔧</div>
-                    <h3 data-lang-key="advantage4_title">售后保障</h3>
-                    <p data-lang-key="advantage4_desc">30天无忧退换、一年质保服务，专业客服团队随时为您解答疑问。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <div class="container">
-            <div class="section-title fade-in">
-                <h2 data-lang-key="testimonials_title">用户评价</h2>
-                <p data-lang-key="testimonials_subtitle">来自亚马逊真实用户的反馈</p>
-            </div>
-            <div class="cards-grid">
-                <div class="card fade-in">
-                    <p data-lang-key="testimonial1_content">"性价比超高！功能齐全，续航给力，戴了一个月非常满意，强烈推荐！"</p>
-                    <h4 data-lang-key="testimonial1_author">— 亚马逊用户 John</h4>
-                </div>
-                <div class="card fade-in">
-                    <p data-lang-key="testimonial2_content">"外观时尚，运动数据准确，健康监测功能很实用，物流也很快。"</p>
-                    <h4 data-lang-key="testimonial2_author">— 亚马逊用户 Sarah</h4>
-                </div>
-                <div class="card fade-in">
-                    <p data-lang-key="testimonial3_content">"质量很好，防水效果不错，客服响应及时，购物体验五星好评！"</p>
-                    <h4 data-lang-key="testimonial3_author">— 亚马逊用户 Michael</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-main">
-                <div class="footer-info">
-                    <div class="footer-section">
-                        <h4 data-lang-key="footer_company_title">公司信息</h4>
-                        <p data-lang-key="footer_company_name">深圳市熊啾啾科技有限公司</p>
-                    </div>
-                    <div class="footer-section">
-                        <h4 data-lang-key="footer_contact_title">联系我们</h4>
-                        <p>📧 admin@xjjnb.com</p>
-                        <p data-lang-key="footer_location">📍 深圳市龙岗区平湖街道禾花社区富康路6号深业物流平湖中心厂房B（宝能智创谷B栋）711</p>
+                <div class="hero-text">
+                    <h1 class="app-title">飞飞记账</h1>
+                    <p class="app-description">存一点，稳一点，未来多一点</p>
+                    <div class="download-buttons">
+                        <a href="https://apps.apple.com/cn/app/%E9%A3%9E%E9%A3%9E%E8%AE%B0%E8%B4%A6/id6762440069"
+                            class="download-button">
+                            <img src="/images/appstore.webp" alt="Download on the App Store" />
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.ysf.save" class="download-button">
+                            <img src="/images/googleplay.webp" alt="Get it on Google Play" />
+                        </a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p class="copyright" data-lang-key="footer_copyright">&copy; 2026 深圳市熊啾啾科技有限公司. 保留所有权利。</p>
-            </div>
-        </div>
-    </footer>
+        </section>
 
-    <!-- JavaScript -->
-    <script src="i18n.js"></script>
-    <script src="script.js"></script>
+        <footer>
+            <div class="footer-text">
+                <span class="footer-copyright"></span>
+                <span class="footer-contact">
+                    <span class="footer-contact-label"></span>
+                    <a class="footer-contact-link" href="mailto:898763215@qq.com">898763215@qq.com</a>
+                </span>
+            </div>
+        </footer>
+    </div>
+    <script src="/js/index_i18n.js"></script>
 </body>
 
 </html>

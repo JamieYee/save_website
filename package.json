@@ -1,10 +1,11 @@
 {
   "name": "save_website",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "飞飞记账官网与帮助中心",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "preview": "vitepress preview docs"
   },
   "repository": {
     "type": "git",
@@ -17,11 +18,8 @@
   "bugs": {
     "url": "https://github.com/JamieYee/save_website/issues"
   },
-  "homepage": "https://github.com/JamieYee/save_website#readme",
-  "dependencies": {
-    "@dicebear/collection": "^9.2.4",
-    "@dicebear/core": "^9.2.4",
-    "semver": "^7.7.3",
-    "sharp": "^0.34.5"
+  "homepage": "https://save.xjjnb.com",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
   }
 }
