@@ -5,8 +5,8 @@ export default defineConfig({
   title: '飞飞记账帮助中心',
   description: '飞飞记账功能说明、数据备份与自动记账指南。',
   base: '/help/',
-  outDir: '../public/help',
-  cleanUrls: true,
+  outDir: '../site/help',
+  cleanUrls: false,
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],

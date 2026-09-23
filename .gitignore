@@ -4,6 +4,7 @@
 # Dependencies
 node_modules/
 docs/.vitepress/cache/
-public/help/
+site/help/
+dist/
 .vercel
 .env*.local
