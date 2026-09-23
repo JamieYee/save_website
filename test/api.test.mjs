@@ -27,13 +27,24 @@ function response() {
 
 test('version endpoint reports updates and rejects missing versions', () => {
   const older = response()
-  checkVersion({ query: { version: '1.1.1' } }, older)
+  checkVersion({ query: { version: '1.1.2' } }, older)
   assert.equal(older.code, 200)
   assert.equal(older.body.hasUpdate, true)
+  assert.equal(older.body.version, '1.1.3')
+  assert.equal(older.body.publishedAt, '2026-09-21T12:55:10Z')
+  assert.equal(
+    older.body.downloadUrl,
+    'https://github.com/JamieYee/save_website/releases/download/v1.1.3/save-1.1.3-release.apk',
+  )
+  assert.equal(
+    older.body.releaseNotes,
+    '新增账户逐笔结余\n优化 AI 智能记账与多笔账单识别\n优化提醒、账单编辑和界面体验\n修复生物识别等已知问题',
+  )
 
   const current = response()
-  checkVersion({ query: { version: '1.1.2' } }, current)
+  checkVersion({ query: { version: '1.1.3' } }, current)
   assert.equal(current.body.hasUpdate, false)
+  assert.equal(current.body.version, '1.1.3')
 
   const missing = response()
   checkVersion({ query: {} }, missing)

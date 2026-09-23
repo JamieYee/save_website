@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f7f8f6" />
     <title>飞飞记账 - 简洁高效的个人记账 App</title>
     <meta name="description" content="飞飞记账是一款简洁高效的个人记账应用，支持快速记账、分类统计、资产管理，帮助你轻松掌控每一笔收支。" />
-    <meta name="keywords" content="飞飞记账, 记账App, 个人记账, 手机记账, 收支管理, 财务管理, 账单统计, 理财工具" />
+    <meta name="keywords" content="飞飞记账, 记账App, 个人记账, 手机记账, 收支管理, 财务管理, 账单统计" />
     <meta name="robots" content="index, follow" />
+    <script src="/js/theme-init.js"></script>
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="icon" sizes="any" href="/favicon.ico" />
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -28,52 +29,193 @@
                 "@type": "Organization",
                 "name": "飞飞记账"
             }
-  }
-  </script>
+        }
+    </script>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <div class="logo">
-                <img src="/images/save.png" alt="Save App Logo" class="logo-icon" />
+    <main>
+        <section class="hero container" aria-labelledby="hero-title">
+            <img class="hero-icon" src="/images/save.png" alt="" width="112" height="112" />
+            <h1 id="hero-title" data-i18n="heroTitle">飞飞记账</h1>
+            <p class="hero-description" data-i18n="heroDescription">存一点，稳一点，未来多一点。轻松记录日常收支，看清每一笔钱的去向。</p>
+            <div class="download-buttons">
+                <a class="store-button store-button-apple"
+                    href="https://apps.apple.com/cn/app/%E9%A3%9E%E9%A3%9E%E8%AE%B0%E8%B4%A6/id6762440069"
+                    aria-label="在 App Store 下载飞飞记账">
+                    <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M12.18 5.53c1.21 0 2.14-.53 2.8-1.35.63-.8 1.02-1.9.93-3.01-1.03.04-2.24.66-2.94 1.47-.62.72-1.16 1.83-1.03 2.9l.24-.01Zm4.62 6.82c.03 2.78 2.43 3.7 2.46 3.72-.02.06-.38 1.31-1.27 2.6-.77 1.11-1.57 2.22-2.83 2.25-1.24.02-1.64-.72-3.06-.72-1.43 0-1.88.7-3.05.74-1.22.05-2.15-1.2-2.93-2.3-1.59-2.29-2.81-6.48-1.18-9.31a4.52 4.52 0 0 1 3.81-2.31c1.19-.02 2.31.82 3.05.82.73 0 2.1-1.01 3.54-.86.6.03 2.3.24 3.39 1.82-.09.05-2.02 1.17-1.99 3.75Z" />
+                    </svg>
+                    <span class="store-copy"><small>Download on the</small><strong>App Store</strong></span>
+                </a>
+                <a class="store-button store-button-google"
+                    href="https://play.google.com/store/apps/details?id=com.ysf.save" aria-label="在 Google Play 下载飞飞记账">
+                    <svg class="store-icon" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
+                        <path
+                            d="M325.3 234.3 104.6 13l280.8 161.2-60.1 60.1ZM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0Zm425.2 225.6-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8ZM104.6 499l280.8-161.2-60.1-60.1L104.6 499Z" />
+                    </svg>
+                    <span class="store-copy"><small>GET IT ON</small><strong>Google Play</strong></span>
+                </a>
             </div>
-            <a href="/help/" class="nav-link">帮助文档</a>
-        </header>
+            <div class="release-meta" aria-label="版本信息">
+                <span class="release-item"><span data-i18n="releaseVersionLabel">版本</span> <strong id="release-version">1.0.0</strong></span>
+                <span class="release-item"><span data-i18n="releaseUpdatedLabel">更新于</span> <time id="release-date" datetime="2026-01-01">2026-01-01</time></span>
+                <a class="release-item release-download" id="release-download" target="_blank" rel="noopener noreferrer" hidden data-i18n="releaseDownload">下载 APK</a>
+            </div>
+            <a class="scroll-cue" href="#screenshots" aria-label="查看应用截图">
+                <svg aria-hidden="true" viewBox="0 0 24 24" width="22" height="22" fill="none">
+                    <path d="m5 9 7 7 7-7" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </section>
 
-        <section class="hero">
-            <div class="hero-content">
-                <div class="hero-image">
-                    <img src="/images/screenshot.webp" alt="App Screenshot" class="fade-in"
-                        style="max-width: 250px" />
+        <section class="screenshots container" id="screenshots" aria-labelledby="screenshots-title">
+            <div class="section-heading">
+                <span class="section-kicker" data-i18n="screenshotsKicker">应用截图</span>
+                <h2 id="screenshots-title" data-i18n="screenshotsTitle">每一笔收支，都清晰可见。</h2>
+            </div>
+            <div class="screenshot-gallery" role="region" aria-label="飞飞记账应用截图" tabindex="0">
+                <div class="screenshot-panel">
+                    <img src="/images/Screenshot1.png" alt="飞飞记账的收支明细页面" width="1291" height="2751" loading="lazy"
+                        decoding="async" />
                 </div>
-                <div class="hero-text">
-                    <h1 class="app-title">飞飞记账</h1>
-                    <p class="app-description">存一点，稳一点，未来多一点</p>
-                    <div class="download-buttons">
-                        <a href="https://apps.apple.com/cn/app/%E9%A3%9E%E9%A3%9E%E8%AE%B0%E8%B4%A6/id6762440069"
-                            class="download-button">
-                            <img src="/images/appstore.webp" alt="Download on the App Store" />
-                        </a>
-                        <a href="https://play.google.com/store/apps/details?id=com.ysf.save" class="download-button">
-                            <img src="/images/googleplay.webp" alt="Get it on Google Play" />
-                        </a>
-                    </div>
+                <div class="screenshot-panel">
+                    <img src="/images/Screenshot2.png" alt="飞飞记账的收支趋势与分类统计页面" width="1291" height="2751" loading="lazy"
+                        decoding="async" />
+                </div>
+                <div class="screenshot-panel">
+                    <img src="/images/Screenshot3.png" alt="飞飞记账的资产管理页面" width="1291" height="2751" loading="lazy"
+                        decoding="async" />
+                </div>
+                <div class="screenshot-panel">
+                    <img src="/images/Screenshot4.png" alt="飞飞记账的个人设置页面" width="1291" height="2751" loading="lazy"
+                        decoding="async" />
                 </div>
             </div>
         </section>
 
-        <footer>
-            <div class="footer-text">
-                <span class="footer-copyright"></span>
-                <span class="footer-contact">
-                    <span class="footer-contact-label"></span>
-                    <a class="footer-contact-link" href="mailto:898763215@qq.com">898763215@qq.com</a>
-                </span>
+        <section class="features container" id="features" aria-labelledby="features-title">
+            <div class="section-heading">
+                <span class="section-kicker" data-i18n="featuresKicker">核心功能</span>
+                <h2 id="features-title" data-i18n="featuresTitle">让记账更轻松，让收支更清楚。</h2>
             </div>
-        </footer>
-    </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">✎</span>
+                    <h3 data-i18n="featureOneTitle">快速记账</h3>
+                    <p data-i18n="featureOneDescription">随手记录收入与支出，记下每一笔日常。</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">↗</span>
+                    <h3 data-i18n="featureTwoTitle">收支分析</h3>
+                    <p data-i18n="featureTwoDescription">用趋势和分类统计看清钱从哪来、花到哪去。</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">◫</span>
+                    <h3 data-i18n="featureThreeTitle">资产总览</h3>
+                    <p data-i18n="featureThreeDescription">集中查看账户、资产与负债，掌握财务全貌。</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">▦</span>
+                    <h3 data-i18n="featureFourTitle">自由定制</h3>
+                    <p data-i18n="featureFourDescription">多账本、分类和图标，都能按自己的习惯设置。</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">◎</span>
+                    <h3 data-i18n="featureFiveTitle">预算管理</h3>
+                    <p data-i18n="featureFiveDescription">设置分类预算，随时了解使用进度。</p>
+                </article>
+                <article class="feature-card">
+                    <span class="feature-icon" aria-hidden="true">☁</span>
+                    <h3 data-i18n="featureSixTitle">本地优先，自主备份</h3>
+                    <p data-i18n="featureSixDescription">账目保存在本地，也可通过 WebDAV 备份到自己的网盘。</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <a class="footer-brand" href="/"><img src="/images/save.png" alt="" width="36" height="36" />飞飞记账</a>
+                <p class="footer-description" data-i18n="footerDescription">轻松记录每一笔，清楚掌握自己的收支。</p>
+                <div class="footer-downloads">
+                    <a class="store-button store-button-apple"
+                        href="https://apps.apple.com/cn/app/%E9%A3%9E%E9%A3%9E%E8%AE%B0%E8%B4%A6/id6762440069"
+                        aria-label="在 App Store 下载飞飞记账">
+                        <svg class="store-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M12.18 5.53c1.21 0 2.14-.53 2.8-1.35.63-.8 1.02-1.9.93-3.01-1.03.04-2.24.66-2.94 1.47-.62.72-1.16 1.83-1.03 2.9l.24-.01Zm4.62 6.82c.03 2.78 2.43 3.7 2.46 3.72-.02.06-.38 1.31-1.27 2.6-.77 1.11-1.57 2.22-2.83 2.25-1.24.02-1.64-.72-3.06-.72-1.43 0-1.88.7-3.05.74-1.22.05-2.15-1.2-2.93-2.3-1.59-2.29-2.81-6.48-1.18-9.31a4.52 4.52 0 0 1 3.81-2.31c1.19-.02 2.31.82 3.05.82.73 0 2.1-1.01 3.54-.86.6.03 2.3.24 3.39 1.82-.09.05-2.02 1.17-1.99 3.75Z" />
+                        </svg>
+                        <span class="store-copy"><small>Download on the</small><strong>App Store</strong></span>
+                    </a>
+                    <a class="store-button store-button-google"
+                        href="https://play.google.com/store/apps/details?id=com.ysf.save"
+                        aria-label="在 Google Play 下载飞飞记账">
+                        <svg class="store-icon" viewBox="0 0 512 512" fill="currentColor" aria-hidden="true">
+                            <path
+                                d="M325.3 234.3 104.6 13l280.8 161.2-60.1 60.1ZM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0Zm425.2 225.6-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8ZM104.6 499l280.8-161.2-60.1-60.1L104.6 499Z" />
+                        </svg>
+                        <span class="store-copy"><small>GET IT ON</small><strong>Google Play</strong></span>
+                    </a>
+                </div>
+                <p class="footer-copyright"></p>
+            </div>
+            <nav class="footer-column" aria-label="产品">
+                <h3 data-i18n="footerProduct">产品</h3>
+                <a href="#features" data-i18n="navFeatures">功能</a>
+                <a href="#screenshots" data-i18n="navScreenshots">应用截图</a>
+                <a href="/help/" data-i18n="navHelp">帮助中心</a>
+            </nav>
+            <nav class="footer-column" aria-label="法律条款">
+                <h3 data-i18n="footerLegal">法律条款</h3>
+                <a href="/privacy.html" data-i18n="privacy">隐私政策</a>
+                <a href="/terms.html" data-i18n="terms">用户协议</a>
+            </nav>
+            <div class="footer-column footer-contact">
+                <h3 data-i18n="footerContact">联系我们</h3>
+                <div class="footer-socials">
+                    <a class="social-link" href="mailto:898763215@qq.com" aria-label="发送邮件至 898763215@qq.com"
+                        title="邮箱">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="5" width="18" height="14" rx="2" />
+                            <path d="m3.5 6.5 8.5 6.5 8.5-6.5" />
+                        </svg>
+                    </a>
+                    <a class="social-link" href="https://xhslink.cn/o/3YulTFDyHv9" target="_blank"
+                        rel="noopener noreferrer" aria-label="访问飞飞记账的小红书主页" title="小红书">
+                        <img src="/images/xiaohongshu.svg" alt="" width="24" height="24" />
+                    </a>
+                </div>
+                <fieldset class="theme-picker">
+                    <legend class="visually-hidden" data-i18n="themeLegend">外观模式</legend>
+                    <label><input type="radio" name="theme" value="light" /><span><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="4" />
+                                <path
+                                    d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+                            </svg><span data-i18n="themeLight">浅色</span></span></label>
+                    <label><input type="radio" name="theme" value="system" /><span><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+                                aria-hidden="true">
+                                <rect x="3" y="4" width="18" height="14" rx="2" />
+                                <path d="M8 22h8m-4-4v4" />
+                            </svg><span data-i18n="themeSystem">系统</span></span></label>
+                    <label><input type="radio" name="theme" value="dark" /><span><svg viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+                                <path d="M20.3 15.1A8.5 8.5 0 0 1 8.9 3.7 8.5 8.5 0 1 0 20.3 15.1Z" />
+                            </svg><span data-i18n="themeDark">深色</span></span></label>
+                </fieldset>
+            </div>
+        </div>
+    </footer>
     <script src="/js/index_i18n.js"></script>
+    <script src="/js/release.js"></script>
+    <script src="/js/theme.js"></script>
+    <script src="/js/motion.js"></script>
 </body>
 
 </html>
