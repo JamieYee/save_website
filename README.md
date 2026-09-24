@@ -11,7 +11,7 @@ npm run build
 
 用 VS Code 打开整个 `save_website` 文件夹，然后点击状态栏的「Go Live」。项目设置会让 Live Server 以 `site/` 为网站根目录：`/` 是官网首页，`/help/` 是帮助中心。修改帮助文档后重新运行 `npm run build`。
 
-官网静态文件位于 `site/`，帮助文档源码位于 `docs/`。头像生成与版本检查是根目录 `api/` 下的 Vercel Functions。`api/_config.mjs` 由 GitHub Action 根据本仓库已发布的稳定版 Release 自动生成：选取最新的含 APK 的 Release，把标签版本号、发布时间、GitHub 官方 APK 直链和 Release 正文分别写入 `version`、`publishedAt`、`downloadUrl`、`releaseNotes`。`releaseNotes` 是一个保留换行的字符串。不要手动维护生成文件。
+官网静态文件位于 `site/`，帮助文档源码位于 `docs/`。头像生成与版本检查是根目录 `api/` 下的 Vercel Functions。`api/_config.mjs` 由 GitHub Action 根据本仓库已发布的稳定版 Release 自动生成：选取最新的含 APK 的 Release，把标签版本号、发布时间、GitHub 官方 APK 直链分别写入 `version`、`publishedAt`、`downloadUrl`。`releaseNotes` 只提取 Release 正文开头连续的更新要点，去掉每行的 Markdown 列表符号，以 `\n` 连接；后面的下载说明和 HTML 不会进入接口。不要手动维护生成文件。
 
 Action 监听 Release 的发布、编辑、取消发布和删除；每天也会核对一次，支持在 Actions 页面手动运行。删除最新 Release 后会回退到上一个符合条件的 Release；全部删除后 API 不再报告新版本，APK 下载链接会消失。工作流需要仓库允许 `GITHUB_TOKEN` 写入内容，且 `main` 分支保护允许此自动提交。
 

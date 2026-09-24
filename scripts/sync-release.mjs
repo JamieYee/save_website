@@ -5,6 +5,20 @@ import semver from 'semver'
 const configUrl = new URL('../api/_config.mjs', import.meta.url)
 const repository = 'JamieYee/save_website'
 
+/** Extract the opening Markdown bullet list, excluding download tables and other sections. */
+export function extractReleaseNotes(body) {
+  const notes = []
+  for (const line of (body ?? '').replace(/\r\n?/g, '\n').split('\n')) {
+    const bullet = line.match(/^\s*[-*+]\s+(.+?)\s*$/)
+    if (bullet) {
+      notes.push(bullet[1])
+    } else if (notes.length || (line.trim() && !/^#{1,6}\s/.test(line))) {
+      break
+    }
+  }
+  return notes.join('\n')
+}
+
 /** Pick the newest published, stable Android release with an unambiguous APK. */
 export function selectAndroidRelease(releases) {
   return releases
@@ -24,7 +38,7 @@ export function selectAndroidRelease(releases) {
         version: semver.clean(release.tag_name),
         publishedAt: release.published_at,
         downloadUrl: apk.browser_download_url,
-        releaseNotes: (release.body ?? '').replace(/\r\n?/g, '\n').trim(),
+        releaseNotes: extractReleaseNotes(release.body),
       }
     })
     .find(Boolean) ?? null
