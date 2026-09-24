@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f7f8f6" />
     <title>飞飞记账 - 简洁高效的个人记账 App</title>
-    <meta name="description" content="飞飞记账是一款简洁高效的个人记账应用，支持快速记账、分类统计、资产管理，帮助你轻松掌控每一笔收支。" />
-    <meta name="keywords" content="飞飞记账, 记账App, 个人记账, 手机记账, 收支管理, 财务管理, 账单统计" />
+    <meta name="description" content="飞飞记账是一款本地优先的个人记账 App，支持快速记账、收支分析、预算管理与 WebDAV 云端备份，轻松看清每一笔收支。" />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://save.xjjnb.com/" />
     <script src="/js/theme-init.js"></script>
     <link rel="stylesheet" href="/css/styles.css" />
     <link rel="icon" type="image/x-icon" href="./favicon.ico" />
@@ -163,14 +163,14 @@
                 </div>
                 <p class="footer-copyright"></p>
             </div>
-            <nav class="footer-column" aria-label="产品">
-                <h3 data-i18n="footerProduct">产品</h3>
-                <a href="#features" data-i18n="navFeatures">功能</a>
+            <nav class="footer-column" aria-labelledby="footer-product-title">
+                <h3 id="footer-product-title" data-i18n="footerProduct">了解应用</h3>
                 <a href="#screenshots" data-i18n="navScreenshots">应用截图</a>
-                <a href="/help/" data-i18n="navHelp">帮助中心</a>
+                <a href="#features" data-i18n="navFeatures">功能</a>
             </nav>
-            <nav class="footer-column" aria-label="法律条款">
-                <h3 data-i18n="footerLegal">法律条款</h3>
+            <nav class="footer-column" aria-labelledby="footer-help-title">
+                <h3 id="footer-help-title" data-i18n="footerLegal">帮助与条款</h3>
+                <a href="/help/" data-i18n="navHelp">帮助中心</a>
                 <a href="/privacy.html" data-i18n="privacy">隐私政策</a>
                 <a href="/terms.html" data-i18n="terms">用户协议</a>
             </nav>
@@ -212,10 +212,18 @@
             </div>
         </div>
     </footer>
+    <button class="back-to-top" type="button" hidden>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" aria-hidden="true">
+            <polyline points="18 15 12 9 6 15" />
+        </svg>
+        <span class="visually-hidden" data-i18n="backToTop">回到顶部</span>
+    </button>
     <script src="/js/index_i18n.js"></script>
     <script src="/js/release.js"></script>
     <script src="/js/theme.js"></script>
     <script src="/js/motion.js"></script>
+    <script src="/js/back-to-top.js"></script>
 </body>
 
 </html>

@@ -14,7 +14,7 @@ export default function handler(req, res) {
   }
 
   try {
-    const hasUpdate = semver.gt(LATEST_VERSION, currentVersion)
+    const hasUpdate = Boolean(LATEST_DOWNLOAD_URL) && semver.gt(LATEST_VERSION, currentVersion)
     return res.status(200).json({
       hasUpdate,
       message: hasUpdate ? '发现新版本，请及时更新' : '当前已是最新版本',

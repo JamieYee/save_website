@@ -10,18 +10,18 @@ export default defineConfig({
   lastUpdated: true,
   head: [
     ['link', { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    ['meta', { name: 'theme-color', content: '#5f9d78' }],
+    ['meta', { name: 'theme-color', content: '#f7f8f6' }],
   ],
   themeConfig: {
     logo: '/images/save.png',
     siteTitle: '飞飞记账',
     nav: [
       { text: '帮助中心', link: '/' },
-      { text: '返回官网', link: 'https://save.xjjnb.com/' },
+      { text: '返回官网', link: '../', target: '_self' },
     ],
     sidebar: [
       { text: '帮助首页', link: '/' },
-      { text: '数据备份', link: '/backup' },
+      { items: [{ text: '数据备份', link: '/backup' }] },
       {
         text: '自动记账',
         collapsed: false,
@@ -30,7 +30,7 @@ export default defineConfig({
           { text: 'iOS 自动记账', link: '/auto-ios' },
         ],
       },
-      { text: '自定义图标', link: '/custom' },
+      { items: [{ text: '自定义图标', link: '/custom' }] },
     ],
     search: {
       provider: 'local',
