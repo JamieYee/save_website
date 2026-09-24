@@ -27,8 +27,8 @@ const siteUrl = 'https://save.xjjnb.com'
 const helpFiles = await readdir(new URL('../site/help/', import.meta.url))
 const pages = [
   '/',
-  '/privacy.html',
-  '/terms.html',
+  '/privacy',
+  '/terms',
   ...helpFiles
     .filter((file) => file.endsWith('.html') && file !== '404.html')
     .map((file) => file === 'index.html' ? '/help/' : `/help/${file}`),
